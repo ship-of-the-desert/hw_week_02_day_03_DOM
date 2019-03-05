@@ -1,4 +1,8 @@
+/*
 
+    PARTONE: about me
+
+*/
 //Change font family
 var body= document.querySelector("body");
 body.style.fontFamily= "Arial, sans-serif";
@@ -32,3 +36,50 @@ img.setAttribute("src", "https://www.logolynx.com/images/logolynx/89/895896f6ef9
 var div= document.querySelector(".profilePicture");
 div.appendChild(img);
 
+/*
+
+    PARTTWO: the book list
+
+*/
+var books = [
+    {
+      title: "The Design of Everyday Things",
+      author: "Don Norman",
+      alreadyRead: false
+    },
+    {
+      title: "The Most Human Human",
+      author: "Brian Christian",
+      alreadyRead: true
+    },
+    {
+      title: "In Search of Lost Time",
+      author: "Marcel Proust",
+      alreadyRead: true
+    },
+    {
+      title: "Ulysses",
+      author: "James Joyce",
+      alreadyRead: true
+    },
+    {
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      alreadyRead: true
+    }
+];
+
+//create h1
+var title= document.createElement("h1");
+title.textContent= "My Book List";
+
+//add h1 to div
+var bookdiv= document.querySelector(".favoriteBooks");
+bookdiv.appendChild(title);
+
+//iterating through books, create p: title and author
+for (var i=0; i < books.length; i++) {
+    var details= document.createElement("p");
+    details.textContent= books[i].title + ", by " + books[i].author;
+    bookdiv.appendChild(details);
+}
