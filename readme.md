@@ -106,7 +106,7 @@ Start with this HTML and save it as "aboutme.html":
   - Change the alignment of the page to `'center'`
   - Replace each of the `span` tags (nickname, favorite, hometown) with your own information (e.g. put your nickname in the nickname span)
   - Give each `li` the class of `"listitem"`
-  - Change each `li`'s text color to `"rebeccapurple"`
+  - Change each `li`'s text color to `"dodgerblue"`
   - Create a new `img` element and set its `src` attribute to a picture of your favorite show or movie. Put that new `img` element in the div with the class of `"profilePicture"`
 
 ## The Book List
