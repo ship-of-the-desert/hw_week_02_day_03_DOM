@@ -10,10 +10,6 @@ body.style.fontFamily= "Arial, sans-serif";
 //Change alignment
 body.setAttribute("align", "center");
 
-//remove bullets
-var list= document.querySelector("ul");
-list.style.listStyle= "none";
-
 //changing text of span
 var nickname= document.getElementById("nickname");
 nickname.textContent= "KZ";
@@ -78,8 +74,44 @@ var bookdiv= document.querySelector(".favoriteBooks");
 bookdiv.appendChild(title);
 
 //iterating through books, create p: title and author
+var bookImages= [
+    "https://images-na.ssl-images-amazon.com/images/I/410RTQezHYL._SX326_BO1,204,203,200_.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/41m1rQjm5tL._SX322_BO1,204,203,200_.jpg",
+    "https://images.penguinrandomhouse.com/cover/9780679645689",
+    "https://upload.wikimedia.org/wikipedia/commons/a/ab/JoyceUlysses2.jpg",
+    "https://images-na.ssl-images-amazon.com/images/I/51vv75oglyL._SX326_BO1,204,203,200_.jpg"
+];
+
 for (var i=0; i < books.length; i++) {
     var details= document.createElement("p");
     details.textContent= books[i].title + ", by " + books[i].author;
     bookdiv.appendChild(details);
+
+    /* 
+        bonus to add images for each book
+    */
+    var bookImg= document.createElement("img");
+    bookImg.setAttribute("src", bookImages[i]);
+    var nw= details.appendChild(bookImg);
+    bookdiv.appendChild(nw);
+}
+
+/*
+
+    bonus
+
+*/
+//remove bullets
+var list= document.querySelector("ul");
+list.style.listStyle= "none";
+
+//adding book covers
+//added inside the upper foor loop
+
+//change color if read
+for (var i= 0; i < books.length; i++) {
+    var container= document.querySelectorAll("p");
+    if (books[i].alreadyRead == true) {
+        container[i].style.backgroundColor= "red";
+    }
 }
