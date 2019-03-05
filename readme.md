@@ -1,49 +1,9 @@
 
-# About Me
-
-Every webpage needs an "About Me" section.
-
-Start with this HTML and save it as "aboutme.html":
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>More DOM Manipulation</title>
-</head>
-
-<body>
-
-  <h1>About Me</h1>
-
-  <div class="profilePicture"></div>
-
-  <ul>
-    <li>Nickname: <span id="nickname"></span></li>
-    <li>Favorite Animal: <span id="favorite"></span></li>
-    <li>Hometown: <span id="hometown"></span></li>
-  </ul>
-
-  <div class="favoriteBooks"></div>
-
-</body>
-
-</html>
-```
 
 - Create a JavaScript file, and link it up
 - Using JavaScript:
 
-  - Change the font-family of the page to `"Arial, sans-serif"`
-  - Change the alignment of the page to `'center'`
-  - Replace each of the `span` tags (nickname, favorite, hometown) with your own information (e.g. put your nickname in the nickname span)
-  - Give each `li` the class of `"listitem"`
-  - Change each `li`'s text color to `"dodgerblue"`
-  - Create a new `img` element and set its `src` attribute to a picture of your favorite show or movie. Put that new `img` element in the div with the class of `"profilePicture"`
+
 
 ## The Book List
 
